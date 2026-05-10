@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: db-ep2
+    ports:
+      - "3306:3306"
+    networks:
+      - tienda-network
+    volumes:
+      - db_data:/var/lib/mysql
+
+networks:
+  tienda-network:
+    driver: bridge
+
+volumes:
+  db_data:
