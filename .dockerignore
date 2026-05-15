@@ -1,0 +1,6 @@
+# Ignorar archivos locales en la compilación de la imagen
+.git
+.github
+.gitignore
+README.md
+docker-compose.yml
